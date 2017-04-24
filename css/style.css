@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('../fonts/raleway-light-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('../fonts/raleway-medium-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaysemibold';
+    src: url('../fonts/raleway-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/raleway-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ===== HELPERS ===== */
+
+/* --- FONTS --- */
+
+.bold {
+  font-family: 'ralewaybold';
+}
+
+.semibold {
+  font-family: 'ralewaysemibold';
+}
+
+.medium {
+  font-family: 'ralewaymedium';
+}
+
+.regular {
+  font-family: 'ralewayregular';
+}
+
+.light {
+  font-family: 'ralewaylight';
+}
+/* ===== END HELPERS ===== */
+
+/* ===== GENERALS ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at center, #434b6a 0%,#30364d 100%);
+  color: #fff;
+  font-family: 'ralewayregular';
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#page {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+a {
+  color: #fff;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ===== END GENERALS ===== */
+
+/* === HEADER === */
+
+
+nav#main-nav {
+  align-items: center;
+  display: flex;
+  padding-top: 50px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.875em;
+}
+
+nav#main-nav ul li {
+  list-style: none;
+}
+
+nav#main-nav ul li:last-child {
+  border-left: solid 1px #fff;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+nav#main-nav ul li a {
+  text-decoration: none;
+}
+
+/* === MAIN === */
+
+
+#main-section {
+    background-color: rgba(41, 42, 50, 0.5);
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.3);
+    padding: 50px 0px 50px 0px;
+    max-width: 500px;
+    min-width: 450px;
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 50px);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+#main-section h2 {
+  font-size: 6.25em;
+}
+
+#main-section h2:after{
+    content: "";
+    height: 5px;
+    width: 165px;
+    background: #fff;
+    display: block;
+    margin: 10px auto;
+}
+
+#main-section h3 {
+  font-size: 1.688em;
+}
+
+#main-section img {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  width: 99px;
+  transition: 0.4s ease-in-out;
+}
+
+#main-section img.small {
+  width: 33px;
+  transition: 0.4s ease-in-out;
+}
+
+/* section inscription */
+
+#main-inscription, #main-connexion {
+    display: none;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+#main-connexion.open, #main-inscription.open{
+    display: block;
+    -webkit-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    height: 250px;
+}
+
+#main-section form input {
+  background: transparent;
+  border: solid 1px #fff;
+  color: #fff;
+  display: block;
+  font-size: 0.875em;
+  height: 40px;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+#main-section form input:focus {
+  background-color: #fff;
+  color: #2a2b35;
+  font-weight: bold;
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #fff;
+  font-weight: lighter;
+}
+
+#main-section form{
+  margin-top: 30px;
+}
+
+#main-section h4 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+#main-section button{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  display: block;
+  font-size: 1.125em;
+  margin: auto;
+  margin-top: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
