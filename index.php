@@ -1,3 +1,18 @@
+<?php
+require_once __DIR__ . '/model/database.php';
+
+// Démarre la session de l'utilisateur en cours
+session_start();
+
+// Je vérifie si l'utilisateur est connecté
+if (isset($_SESSION['id'])) {
+    // Je récupère les infos de l'utilisateur en cours
+    $user = getUser($_SESSION['id']);
+    if (isset($user['id'])) {
+        header("Location: admin/");
+    }
+}
+?>
 <html>
 
     <head>
@@ -31,7 +46,7 @@
                     <!-- Section Inscription-->
                     <section id="main-inscription">
                         <h4 class="bold center">Inscription</h4>
-                        <form>
+                        <form action="inscription.php" method="POST">
                             <input type="mail" name="mail" placeholder="E-mail" />
                             <input type="password" name="password" placeholder="Mot de passe" />
                             <input type="password" name="confirm_password" placeholder="Confirmer le mot de passe" />
@@ -42,7 +57,7 @@
 
                     <section id="main-connexion">
                         <h4 class="bold center">Connexion</h4>
-                        
+
                         <form action="admin/" method="POST">
                             <input type="email" name="email" placeholder="E-mail">
                             <input type="password" name="password" placeholder="Mot de passe">
