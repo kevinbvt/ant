@@ -43,6 +43,7 @@ function getUserByEmailPassword($email, $password) {
 }
 
 function insertUser($email, $password) {
+    /* @var $connection PDO */
     global $connection;
 
     $query = "INSERT INTO utilisateur (adresse_mail, mot_de_passe) VALUES (:adresse_mail, MD5(:mot_de_passe));";
@@ -51,4 +52,7 @@ function insertUser($email, $password) {
     $stmt->bindParam(':adresse_mail', $email);
     $stmt->bindParam(':mot_de_passe', $password);
     $stmt->execute();
+    
+    $id = $connection->lastInsertId();
+    insertEntreprise($id);
 }
