@@ -4,8 +4,8 @@
 
 <form action="insert_query.php" method="POST">
     <div>
-        <label>Libellé</label>
-        <input type="text" name="libelle_cat">
+        <label>Nom</label>
+        <input type="text" name="nom">
     </div>
     <input type="submit">
 </form>

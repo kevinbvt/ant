@@ -35,7 +35,7 @@ function insertEntreprise($id) {
     $stmt->execute();
 }
 
-function updateEntreprise($id, $ville) {
+function updateEntreprise($id, $ville, $code_postal, $adresse, $date_creation, $telephone, $siret, $bic, $iban) {
     /* @var $connection PDO */
     global $connection;
     
@@ -54,5 +54,12 @@ function updateEntreprise($id, $ville) {
     $stmt = $connection->prepare($query);
     $stmt->bindParam(':id', $id);
     $stmt->bindParam(':ville', $ville);
+    $stmt->bindParam(':code_postal', $code_postal);
+    $stmt->bindParam(':adresse', $adresse);
+    $stmt->bindParam(':date_creation', $date_creation);
+    $stmt->bindParam(':telephone', $telephone);
+    $stmt->bindParam(':siret', $siret);
+    $stmt->bindParam(':bic', $bic);
+    $stmt->bindParam(':iban', $iban);
     $stmt->execute();
 }

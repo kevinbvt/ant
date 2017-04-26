@@ -12,6 +12,6 @@ $siret = $_POST['siret'];
 $bic = $_POST['bic'];
 $iban = $_POST['iban'];
 
-updateEntreprise($id, $ville, $code_postal);
+updateEntreprise($id, $ville, $code_postal, $adresse, $date_creation, $telephone, $siret, $bic, $iban);
 
 header("Location: index.php");

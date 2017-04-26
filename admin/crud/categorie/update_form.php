@@ -10,8 +10,8 @@ require_once '../../layout/header.php';
 
 <form action="update_query.php" method="POST">
     <div>
-        <label>Libellé</label>
-        <input type="text" name="libelle" value="<?php echo $categorie['libelle']; ?>">
+        <label>Nom</label>
+        <input type="text" name="libelle" value="<?php echo $categorie['nom']; ?>">
     </div>
     <input type="hidden" name="id" value="<?php echo $categorie['id']; ?>">
     <input type="submit">

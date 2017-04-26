@@ -1,8 +1,7 @@
 <?php
 require_once '../../../model/database.php';
-$liste_categories = getAllCategories();
-
 require_once '../../layout/header.php';
+$liste_categories = getAllCategories($user['id']);
 ?>
 
 <h1>Liste des catégories</h1>
@@ -12,14 +11,14 @@ require_once '../../layout/header.php';
 <table>
     <thead>
         <tr>
-            <th>Libellé</th>
+            <th>Nom</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         <?php foreach ($liste_categories as $categorie) : ?>
         <tr>
-            <td><?php echo $categorie['libelle']; ?></td>
+            <td><?php echo $categorie['nom']; ?></td>
             <td>
                 <a href="update_form.php?id=<?php echo $categorie['id']; ?>">Modifier</a>
                 <form action="delete_query.php" method="POST">
