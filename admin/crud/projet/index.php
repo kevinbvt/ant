@@ -20,6 +20,7 @@ $liste_projets = getAllProjets($user['id']);
         <tr>
             <td><?php echo $projet['nom_projet']; ?></td>
             <td>
+                <a href="show.php?id=<?php echo $projet['id']; ?>">Afficher</a>
                 <a href="update_form.php?id=<?php echo $projet['id']; ?>">Modifier</a>
                 <form action="delete_query.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $projet['id']; ?>">

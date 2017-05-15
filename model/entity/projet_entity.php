@@ -23,8 +23,10 @@ function getProjet($id) {
     
     $query = "SELECT
                 projets.id,
-                projets.nom_projet
+                projets.nom_projet,
+                clients.nom AS nom_client
             FROM projets
+            INNER JOIN clients ON clients.id = projets.clients_id
             WHERE projets.id = :id
             ;";
 
