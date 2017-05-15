@@ -2,8 +2,10 @@
 require_once '../../security.php';
 require_once '../../../model/database.php';
 
-$nom = $_POST['nom'];
+$nom_projet = $_POST['nom_projet'];
+$clients_id = $_POST['clients_id'];
+$categorie_id = $_POST['categorie_id'];
 
-insertCategorie($user['id'], $nom);
+insertProjet($nom_projet, $clients_id, $categorie_id);
 
 header("Location: index.php");

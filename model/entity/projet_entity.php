@@ -4,10 +4,11 @@ function getAllProjets($utilisateur_id) {
     global $connection;
     
     $query = "SELECT
-                categorie.id,
-                categorie.nom
-            FROM categorie
-            WHERE categorie.utilisateur_id = :utilisateur_id
+                projets.id,
+                projets.nom_projet
+            FROM projets
+            INNER JOIN clients ON clients.id = projets.clients_id
+            WHERE clients.entreprise_id = :utilisateur_id
             ;";
 
     $stmt = $connection->prepare($query);
@@ -21,10 +22,10 @@ function getProjet($id) {
     global $connection;
     
     $query = "SELECT
-                categorie.id,
-                categorie.nom
-            FROM categorie
-            WHERE categorie.id = :id
+                projets.id,
+                projets.nom_projet
+            FROM projets
+            WHERE projets.id = :id
             ;";
 
     $stmt = $connection->prepare($query);
@@ -38,7 +39,7 @@ function insertProjet($nom_projet, $clients_id, $categorie_id) {
     /* @var $connection PDO */
     global $connection;
     
-    $query = "INSERT INTO projets (nom_projet, clients_id, categorie_id) VALUES (:nom_projet, :clients_id, categorie_id);";
+    $query = "INSERT INTO projets (nom_projet, clients_id, categorie_id) VALUES (:nom_projet, :clients_id, :categorie_id);";
 
     $stmt = $connection->prepare($query);
     $stmt->bindParam(':nom_projet', $nom_projet);

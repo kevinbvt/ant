@@ -1,13 +1,33 @@
-<?php require_once '../../layout/header.php'; ?>
+<?php
+require_once '../../security.php';
+require_once '../../../model/database.php';
 
-<h1>Ajouter une nouvelle catégorie</h1>
+$liste_clients = getAllClients($user['id']);
+$liste_categories = getAllCategories($user['id']);
+
+require_once '../../layout/header.php';
+?>
+
+<h1>Ajouter un nouveau projet</h1>
 
 <form action="insert_query.php" method="POST">
     <div>
         <label>Projet</label>
         <input type="text" name="nom_projet">
+        <label>Client</label>
+        <select name="clients_id">
+            <?php foreach ($liste_clients as $client) : ?>
+            <option>Choisir un client</option>
+            <option value="<?php echo $client['id'] ?>"><?php echo $client['nom'] ?></option>
+            <?php endforeach; ?>
+        </select>
         <label>Catégorie</label>
-        <input type="text" name="nom_projet">
+        <select name="categorie_id">
+            <?php foreach ($liste_categories as $categorie) : ?>
+            <option>Choisir une catégorie</option>
+            <option value="<?php echo $categorie['id'] ?>"><?php echo $categorie['nom'] ?></option>
+            <?php endforeach; ?>
+        </select>
     </div>
     <input type="submit">
 </form>

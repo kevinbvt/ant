@@ -1,7 +1,7 @@
 <?php
 require_once '../../../model/database.php';
 require_once '../../layout/header.php';
-$liste_categories = getAllProjets($user['id']);
+$liste_projets = getAllProjets($user['id']);
 ?>
 
 <h1>Liste des Projets</h1>
@@ -16,13 +16,13 @@ $liste_categories = getAllProjets($user['id']);
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($liste_categories as $categorie) : ?>
+        <?php foreach ($liste_projets as $projet) : ?>
         <tr>
-            <td><?php echo $categorie['nom']; ?></td>
+            <td><?php echo $projet['nom_projet']; ?></td>
             <td>
-                <a href="update_form.php?id=<?php echo $categorie['id']; ?>">Modifier</a>
+                <a href="update_form.php?id=<?php echo $projet['id']; ?>">Modifier</a>
                 <form action="delete_query.php" method="POST">
-                    <input type="hidden" name="id" value="<?php echo $categorie['id']; ?>">
+                    <input type="hidden" name="id" value="<?php echo $projet['id']; ?>">
                     <input type="submit" value="Supprimer">
                 </form>
             </td>

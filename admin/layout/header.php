@@ -14,10 +14,9 @@ require_once __DIR__ . '/../security.php';
             <ul>
                 <li><a href="<?php echo $siteurl; ?>admin/crud/projet/">Mes projets</a></li>
                 <li><a href="<?php echo $siteurl; ?>admin/crud/entreprise/">Mon Entreprise</a></li>
+                <li><a href="<?php echo $siteurl; ?>admin/crud/client/">Mes clients</a></li>                
                 <li><a href="<?php echo $siteurl; ?>admin/crud/categorie/">Catégories</a></li>
-                <li><a href="<?php echo $siteurl; ?>admin/crud/recette/">Recettes</a></li>
                 <li><a href="<?php echo $siteurl; ?>admin/">Dashboard</a></li>
-                <li><a href="<?php echo $siteurl; ?>">Front</a></li>
                 <li><a href="<?php echo $siteurl; ?>admin/logout.php">Logout</a></li>
             </ul>
         </nav>
