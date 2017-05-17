@@ -16,15 +16,15 @@ require_once '../../layout/header.php';
         <input type="text" name="nom_projet">
         <label>Client</label>
         <select name="clients_id">
-            <?php foreach ($liste_clients as $client) : ?>
             <option>Choisir un client</option>
+            <?php foreach ($liste_clients as $client) : ?>
             <option value="<?php echo $client['id'] ?>"><?php echo $client['nom'] ?></option>
             <?php endforeach; ?>
         </select>
         <label>Catégorie</label>
         <select name="categorie_id">
-            <?php foreach ($liste_categories as $categorie) : ?>
             <option>Choisir une catégorie</option>
+            <?php foreach ($liste_categories as $categorie) : ?>
             <option value="<?php echo $categorie['id'] ?>"><?php echo $categorie['nom'] ?></option>
             <?php endforeach; ?>
         </select>

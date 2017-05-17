@@ -4,6 +4,6 @@ require_once '../../../model/database.php';
 
 $id = $_POST['id'];
 
-deleteCategorie($id);
+deleteProjet($id);
 
 header("Location: index.php");
