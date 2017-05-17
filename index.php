@@ -20,11 +20,12 @@ if (isset($_SESSION['id'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <title>Ant</title>
-        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link type="text/css" rel="stylesheet" href="css/login.css" />
         <link type="text/css" rel="stylesheet" href="css/normalize.css" />
     </head>
 
     <body>
+       
         <div id="page">
             <header>
                 <nav id="main-nav">

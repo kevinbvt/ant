@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Ant</title>
-</head>
-<body>
-   <div id="main" class="nav">
-       <a class="nav--logo" href=""><img src="" alt=""></a>
-        <nav class="nav--up">
-            <a href="">Mon profil</a>
-            <a href="">Mon auto-entreprise</a>
-            <a href="">Mes clients</a>
-            <a href="">Mon compte</a>
-            <a href="">Se deconnecter</a>
-        </nav>
-        
-        <nav class="nav--down">
-            <a href="">Support</a>
-            <a href="">Contactez-nous</a>
-            <a href="">Remerciement</a>
-            <a href="">Mention légales</a>
-        </nav>
-        <a href="">ant.pro©2017</a>
-   </div>
-
+<? require_once __DIR__ . '/layout/header.php'; ?>
+   
     <section class="container">
        <div class="container--header">
             <a href="">Ant</a>
@@ -147,5 +123,4 @@ Préparez-le dès maintenant !</p>
         });
     </script>
 
-</body>
-</html>
+<? require_once __DIR__ . '/layout/footer.php'; ?>
