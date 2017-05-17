@@ -59,7 +59,7 @@ if (isset($_SESSION['id'])) {
                     <section id="main-connexion">
                         <h4 class="bold center">Connexion</h4>
 
-                        <form action="admin/index-profil.php" method="POST">
+                        <form action="admin/" method="POST">
                             <input type="email" name="email" placeholder="E-mail">
                             <input type="password" name="password" placeholder="Mot de passe">
                             <button type="submit" class="bold" >Se connecter</button>
